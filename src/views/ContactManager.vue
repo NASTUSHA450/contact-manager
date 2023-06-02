@@ -42,10 +42,10 @@
         </p>
       </div>
       <div class="col-4">
-        <router-link :to="`/contacts/edit/${contact.id}`" class="btn"
+        <router-link :to="`/contacts/edit/${contact.id}`" class="btn text-success"
           >edit</router-link
         >
-        <button class="btn" @click="deleteContact(contact.id)">delete</button>
+        <button class="btn text-danger" @click="deleteContact(contact.id)">delete</button>
       </div>
     </div>
   </div>
