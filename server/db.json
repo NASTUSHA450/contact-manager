@@ -1,0 +1,32 @@
+{
+  "contacts": [
+    {
+      "id": "dhwidje",
+      "name": "Brad",
+      "surname": "Gibson",
+      "email": "hello@gmail.com",
+      "mobile": "49509350593"
+    },
+    {
+      "id": "dheeidje",
+      "name": "Brad",
+      "surname": "Gibson",
+      "email": "hello@gmail.com",
+      "mobile": "49509350593"
+    },
+    {
+      "id": "fokkidje",
+      "name": "Brad",
+      "surname": "Gibson",
+      "email": "hello@gmail.com",
+      "mobile": "49509350593"
+    },
+    {
+      "name": "Anastasia",
+      "surname": "Dragunskaya",
+      "email": "nastyadragunskaya@gmail.com",
+      "mobile": "89174277000",
+      "id": "KmawltN"
+    }
+  ]
+}
