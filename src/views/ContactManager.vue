@@ -11,10 +11,12 @@
       <div class="col-12 mt-4">
         <div class="row">
           <div class="col-md-4 col-6">
-            <input type="text" class="form-control" placeholder="Search Name" />
-          </div>
-          <div class="col-md-4 col-6">
-            <input type="submit" class="btn btn-outline-dark" />
+            <input
+              v-model="search"
+              type="text"
+              class="form-control"
+              placeholder="Search Name"
+            />
           </div>
         </div>
       </div>
@@ -24,7 +26,7 @@
     {{ errorMessage }}
   </div>
   <div class="container mt-4" v-if="contacts.length > 0">
-    <div class="row" v-for="contact of contacts" :key="contact">
+    <div class="row" v-for="contact of filteredContacts" :key="contact">
       <div class="col-8 card">
         <p class="my-2">
           Name: <span class="fw-bold">{{ contact.name }}</span>
@@ -57,6 +59,7 @@ export default {
     loading: false,
     contacts: [],
     errorMessage: null,
+    search: "",
   }),
   async created() {
     try {
@@ -68,6 +71,16 @@ export default {
       this.errorMessage = error;
       this.loading = false;
     }
+  },
+  computed: {
+    filteredContacts() {
+      return this.contacts.filter((contact) => {
+        return (
+          contact.name.match(new RegExp(this.search, "i")) ||
+          contact.surname.match(new RegExp(this.search, "i"))
+        );
+      });
+    },
   },
   methods: {
     async deleteContact(contactId) {
