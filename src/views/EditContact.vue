@@ -10,25 +10,25 @@
     <div class="row">
       <div class="col-md-4">
         <form @submit.prevent="updateSubmit()">
-          <input
+          <input  required
             v-model="contact.name"
             type="text"
             class="form-control"
             placeholder="Name"
           />
-          <input
+          <input required
             v-model="contact.surname"
             type="text"
             class="form-control mt-3"
             placeholder="Surname"
           />
-          <input
+          <input required
             v-model="contact.mobile"
             type="text"
             class="form-control mt-3"
             placeholder="Phone"
           />
-          <input
+          <input required
             v-model="contact.email"
             type="text"
             class="form-control mt-3"
